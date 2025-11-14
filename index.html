@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkanoid Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>🎮 ARKANOID</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">Score:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Lives:</span>
+                    <span class="value" id="lives">3</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Bricks:</span>
+                    <span class="value" id="bricks">0</span>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div class="game-info">
+            <p id="startMessage">Press <span class="key">ENTER</span> to start the game</p>
+            <p id="gameStatus"></p>
+        </div>
+
+        <div class="controls">
+            <p>Use <span class="key">← →</span> Arrow Keys to move the paddle</p>
+            <p>Press <span class="key">SPACE</span> to fire gun at bricks</p>
+            <p style="font-size: 0.85em; margin-top: 10px; color: #aaa;">
+                🌟 Yellow Star = 3 Balls | 🟢 Plus = Enlarge Paddle | 🔴 Minus = Shrink Paddle
+            </p>
+        </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="paddleSound" src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" preload="auto"></audio>
+    <audio id="brickSound" src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" preload="auto"></audio>
+    <audio id="gameOverSound" src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" preload="auto"></audio>
+    <audio id="winSound" src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
